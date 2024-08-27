@@ -10,7 +10,7 @@ type RecaptchaV2TaskProxyless struct {
 	WebsiteURL          string  `json:"websiteURL"`
 	WebsiteKey          string  `json:"websiteKey"`
 	RecaptchaDataSValue *string `json:"recaptchaDataSValue,omitempty"`
-	userAgentAndCookies
+	UserAgentAndCookies
 }
 
 func NewRecaptchaV2TaskProxyless(websiteURL, websiteKey string) RecaptchaV2TaskProxyless {

@@ -14,7 +14,7 @@ type TurnstileTaskProxyless struct {
 	Data               *string `json:"Data,omitempty"`
 	PageData           *string `json:"PageData,omitempty"`
 	HtmlPageBase64     *string `json:"htmlPageBase64,omitempty"`
-	userAgentAndCookies
+	UserAgentAndCookies
 }
 
 func NewTurnstileTaskProxyless(websiteURL, websiteKey string) TurnstileTaskProxyless {
@@ -67,7 +67,7 @@ func (t TurnstileTaskProxyless) Validate() error {
 type TurnstileTask struct {
 	TurnstileTaskProxyless
 	taskProxy
-	userAgentAndCookies
+	UserAgentAndCookies
 }
 
 func (t TurnstileTaskProxyless) WithCloudflareTaskType(cloudflareTaskType string) TurnstileTaskProxyless {
@@ -112,7 +112,7 @@ func NewTurnstileTask(websiteURL, websiteKey, proxyType, proxyAddress string, pr
 			ProxyAddress: proxyAddress,
 			ProxyPort:    proxyPort,
 		},
-		userAgentAndCookies: userAgentAndCookies{
+		UserAgentAndCookies: UserAgentAndCookies{
 			UserAgent: &userAgent,
 		},
 	}

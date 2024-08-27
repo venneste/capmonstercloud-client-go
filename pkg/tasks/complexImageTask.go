@@ -6,7 +6,7 @@ type ComplexImageTask struct {
 	ImageUrls    *[]string `json:"imageUrls"`
 	ImagesBase64 *[]string `json:"imagesBase64"`
 	WebsiteURL   *string   `json:"websiteURL"`
-	userAgentAndCookies
+	UserAgentAndCookies
 }
 
 type ComplexImageTaskSolution struct {

@@ -11,7 +11,7 @@ type HCaptchaTaskProxyless struct {
 	WebsiteKey  string  `json:"websiteKey"`
 	IsInvisible *bool   `json:"isInvisible,omitempty"`
 	Data        *string `json:"data,omitempty"`
-	userAgentAndCookies
+	UserAgentAndCookies
 }
 
 func NewHCaptchaTaskProxyless(websiteURL, websiteKey string) HCaptchaTaskProxyless {

@@ -14,7 +14,7 @@ type GeeTestTaskProxyless struct {
 	InitParameters            *interface{} `json:"initParameters,omitempty"`
 	GeetestApiServerSubdomain *string      `json:"geetestApiServerSubdomain,omitempty"`
 	GeetestGetLib             *string      `json:"geetestGetLib,omitempty"`
-	userAgentAndCookies
+	UserAgentAndCookies
 }
 
 func NewGeeTestTaskProxyless(websiteURL string, gt string) GeeTestTaskProxyless {
@@ -71,7 +71,7 @@ func (t GeeTestTaskProxyless) Validate() error {
 type GeeTestTask struct {
 	GeeTestTaskProxyless
 	taskProxy
-	userAgentAndCookies
+	UserAgentAndCookies
 }
 
 func NewGeeTestTask(websiteURL, gt, proxyType, proxyAddress string, proxyPort int, userAgent string) GeeTestTask {
@@ -85,7 +85,7 @@ func NewGeeTestTask(websiteURL, gt, proxyType, proxyAddress string, proxyPort in
 			ProxyAddress: proxyAddress,
 			ProxyPort:    proxyPort,
 		},
-		userAgentAndCookies: userAgentAndCookies{
+		UserAgentAndCookies: UserAgentAndCookies{
 			UserAgent: &userAgent,
 		},
 	}

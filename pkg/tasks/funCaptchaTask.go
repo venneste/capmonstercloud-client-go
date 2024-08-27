@@ -44,7 +44,7 @@ func (t FunCaptchaTaskProxyless) Validate() error {
 type FunCaptchaTask struct {
 	FunCaptchaTaskProxyless
 	taskProxy
-	userAgentAndCookies
+	UserAgentAndCookies
 }
 
 func NewFunCaptchaTask(websiteURL, websitePublicKey, proxyType, proxyAddress, userAgent string, proxyPort int) FunCaptchaTask {
@@ -59,7 +59,7 @@ func NewFunCaptchaTask(websiteURL, websitePublicKey, proxyType, proxyAddress, us
 			ProxyAddress: proxyAddress,
 			ProxyPort:    proxyPort,
 		},
-		userAgentAndCookies: userAgentAndCookies{
+		UserAgentAndCookies: UserAgentAndCookies{
 			UserAgent: &userAgent,
 		},
 	}

@@ -47,7 +47,7 @@ func (t RecaptchaV2EnterpriseTaskProxyless) Validate() error {
 type RecaptchaV2EnterpriseTask struct {
 	RecaptchaV2EnterpriseTaskProxyless
 	taskProxy
-	userAgentAndCookies
+	UserAgentAndCookies
 }
 
 func NewRecaptchaV2EnterpriseTask(websiteURL, websiteKey, proxyType, proxyAddress string, proxyPort int) RecaptchaV2EnterpriseTask {
