@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ZennoLab/capmonstercloud-client-go/pkg/tasks"
+	"github.com/venneste/capmonstercloud-client-go/pkg/tasks"
 )
 
 func TestSolveRecaptchaV2Proxyless(t *testing.T) {

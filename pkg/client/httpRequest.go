@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func (c *capmonsterClient) invokeRequest(body []byte, url string) ([]byte, error) {
+func (c *CapmonsterClient) invokeRequest(body []byte, url string) ([]byte, error) {
 	bodyReader := bytes.NewReader(body)
 	req, err := http.NewRequest(http.MethodPost, url, bodyReader)
 	if err != nil {

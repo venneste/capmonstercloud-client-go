@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/ZennoLab/capmonstercloud-client-go/pkg/tasks"
+	"github.com/venneste/capmonstercloud-client-go/pkg/tasks"
 )
 
 type result struct {
@@ -75,7 +75,7 @@ type getTaskResultPayload struct {
 	TaskId    int    `json:"taskId"`
 }
 
-func (c *capmonsterClient) getTaskResult(taskId int, result interface{}) error {
+func (c *CapmonsterClient) getTaskResult(taskId int, result interface{}) error {
 	body, err := json.Marshal(getTaskResultPayload{
 		ClientKey: c.clientKey,
 		TaskId:    taskId,

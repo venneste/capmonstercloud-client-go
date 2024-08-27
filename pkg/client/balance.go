@@ -15,7 +15,7 @@ type getBalanceResponsePayload struct {
 	Balance   float64 `json:"balance"`
 }
 
-func (c *capmonsterClient) GetBalance() (float64, error) {
+func (c *CapmonsterClient) GetBalance() (float64, error) {
 	body, err := json.Marshal(getBalanceRequestPayload{ClientKey: c.clientKey})
 	if err != nil {
 		return 0, fmt.Errorf("marshal payload for request: %w", err)

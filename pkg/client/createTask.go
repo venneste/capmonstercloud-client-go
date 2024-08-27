@@ -18,7 +18,7 @@ type createTaskRequestResponsePayload struct {
 	TaskId    int    `json:"taskId"`
 }
 
-func (c *capmonsterClient) createTask(task interface{}, callbackUrl *string) (int, error) {
+func (c *CapmonsterClient) createTask(task interface{}, callbackUrl *string) (int, error) {
 	body, err := json.Marshal(createTaskRequestPayload{
 		SoftId:      softId,
 		ClientKey:   c.clientKey,

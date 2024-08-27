@@ -28,13 +28,13 @@ var (
 	}
 )
 
-type capmonsterClient struct {
+type CapmonsterClient struct {
 	httpClient *http.Client
 	clientKey  string
 }
 
-func New(clientKey string) *capmonsterClient {
-	return &capmonsterClient{
+func New(clientKey string) *CapmonsterClient {
+	return &CapmonsterClient{
 		httpClient: httpClient,
 		clientKey:  clientKey,
 	}
