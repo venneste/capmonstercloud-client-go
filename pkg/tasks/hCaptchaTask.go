@@ -41,7 +41,7 @@ func (t HCaptchaTaskProxyless) Validate() error {
 		return ErrInvalidWebSiteKey
 	}
 
-	if t.Data != nil && t.UserAgent == nil {
+	if t.Data != nil && &t.UserAgent == nil {
 		return ErrUserAgentRequired
 	}
 	return nil

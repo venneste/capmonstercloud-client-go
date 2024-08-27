@@ -60,7 +60,7 @@ func NewFunCaptchaTask(websiteURL, websitePublicKey, proxyType, proxyAddress, us
 			ProxyPort:    proxyPort,
 		},
 		UserAgentAndCookies: UserAgentAndCookies{
-			UserAgent: &userAgent,
+			UserAgent: userAgent,
 		},
 	}
 }

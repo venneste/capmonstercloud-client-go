@@ -41,7 +41,7 @@ func (t TurnstileTaskProxyless) Validate() error {
 		return ErrCloudflareTaskType
 	}
 
-	if t.CloudflareTaskType != nil && t.UserAgent == nil {
+	if t.CloudflareTaskType != nil && &t.UserAgent == nil {
 		return ErrUserAgentRequired
 	}
 
@@ -96,7 +96,7 @@ func (t TurnstileTaskProxyless) WithHtmlPageBase64(htmlPageBase64 string) Turnst
 }
 
 func (t TurnstileTaskProxyless) WithUserAgent(userAgent string) TurnstileTaskProxyless {
-	t.UserAgent = &userAgent
+	t.UserAgent = userAgent
 	return t
 }
 
@@ -113,7 +113,7 @@ func NewTurnstileTask(websiteURL, websiteKey, proxyType, proxyAddress string, pr
 			ProxyPort:    proxyPort,
 		},
 		UserAgentAndCookies: UserAgentAndCookies{
-			UserAgent: &userAgent,
+			UserAgent: userAgent,
 		},
 	}
 }

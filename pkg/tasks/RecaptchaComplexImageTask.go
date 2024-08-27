@@ -47,7 +47,7 @@ func (t RecaptchaComplexImageTask) WithMetadataTaskDefinition(taskDefinition str
 }
 
 func (t RecaptchaComplexImageTask) WithUserAgent(userAgent string) RecaptchaComplexImageTask {
-	t.ComplexImageTask.UserAgent = &userAgent
+	t.ComplexImageTask.UserAgent = userAgent
 	return t
 }
 

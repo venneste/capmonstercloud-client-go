@@ -40,7 +40,7 @@ func (t FuncaptchaComplexImageTask) WithMetadataTask(task string) FuncaptchaComp
 }
 
 func (t FuncaptchaComplexImageTask) WithUserAgent(userAgent string) FuncaptchaComplexImageTask {
-	t.ComplexImageTask.UserAgent = &userAgent
+	t.ComplexImageTask.UserAgent = userAgent
 	return t
 }
 

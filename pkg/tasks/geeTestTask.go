@@ -51,7 +51,7 @@ func (t GeeTestTaskProxyless) WithInitParametres(initParameters interface{}) Gee
 }
 
 func (t GeeTestTaskProxyless) WithUserAgent(userAgent string) GeeTestTaskProxyless {
-	t.UserAgent = &userAgent
+	t.UserAgent = userAgent
 	return t
 }
 
@@ -86,7 +86,7 @@ func NewGeeTestTask(websiteURL, gt, proxyType, proxyAddress string, proxyPort in
 			ProxyPort:    proxyPort,
 		},
 		UserAgentAndCookies: UserAgentAndCookies{
-			UserAgent: &userAgent,
+			UserAgent: userAgent,
 		},
 	}
 }
